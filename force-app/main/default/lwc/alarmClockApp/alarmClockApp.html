@@ -16,6 +16,7 @@
                 <c-clock-dropdown label="AM/PM" options={meridians} unique-id="select-meridian" onoptionhandler={optionHandler}></c-clock-dropdown>
             </div>
             </div>
-            <button class="slds-button slds-button_neutral slds-button_stretch">Set Alarm</button>
+            <button class="slds-button slds-button_neutral slds-button_stretch" disabled={isFieldNotSelected}
+            onclick={handleButton} >Set Alarm</button>
     </div>
 </template>                 
