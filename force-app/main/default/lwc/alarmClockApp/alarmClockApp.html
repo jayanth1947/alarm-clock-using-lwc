@@ -1,7 +1,7 @@
 <template>
     <div class="alarm-card">
         <h1>Alarm Clock</h1>
-        <img src={clockImage} alt="Clock Image"
+        <img src={clockImage} class={shakeImage} alt="Clock Image"
         height="200px"
         width="200px">
         <h2>{currentTime}</h2>
@@ -16,7 +16,17 @@
                 <c-clock-dropdown label="AM/PM" options={meridians} unique-id="select-meridian" onoptionhandler={optionHandler}></c-clock-dropdown>
             </div>
             </div>
-            <button class="slds-button slds-button_neutral slds-button_stretch" disabled={isFieldNotSelected}
+
+            <template if:false={isAlarmSet}>
+                <button class="slds-button slds-button_neutral slds-button_stretch" disabled={isFieldNotSelected}
             onclick={handleButton} >Set Alarm</button>
+            </template>
+            
+            <template if:true={isAlarmSet}>
+                <button class="slds-button slds-button_neutral slds-button_stretch"
+            onclick={clearButton} >Clear Alarm</button>
+            </template>
+
+            
     </div>
 </template>                 

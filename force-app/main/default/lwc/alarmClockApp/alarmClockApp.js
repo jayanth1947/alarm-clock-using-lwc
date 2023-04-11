@@ -6,12 +6,14 @@ export default class AlarmClockApp extends LightningElement {
 
     currentTime=''
 
+    
     hours=[]
     minutes=[]
     meridians=["AM","PM"]
 
     alarmTime
-    isAlarmSet
+    isAlarmSet=false
+    isAlarmTriggered=false
 
     hourSelected
     minuteSelected
@@ -21,6 +23,12 @@ export default class AlarmClockApp extends LightningElement {
     get isFieldNotSelected(){
         return !(this.hourSelected && this.minuteSelected && this.meridianSelected)
     }
+
+    get shakeImage(){
+        return this.isAlarmTriggered ? 'shake':''
+    }
+
+
     connectedCallback(){
         this.currentTimeHandler()
         this.createHoursOption()
@@ -52,6 +60,7 @@ export default class AlarmClockApp extends LightningElement {
         this.currentTime=`${hours}:${minutes}:${seconds} ${ampm}`
         if(this.alarmTime===`${hours}:${minutes} ${ampm}`){
             console.log("Alarm Triggered");
+            this.isAlarmTriggered=true
         }
         },1000)
         
@@ -93,5 +102,17 @@ export default class AlarmClockApp extends LightningElement {
     handleButton(){
         this.alarmTime= `${this.hourSelected}:${this.minuteSelected} ${this.meridianSelected}`
         this.isAlarmSet=true
+    }
+
+    clearButton(){
+
+        this.alarmTime=''
+        this.isAlarmSet=true
+        this.isAlarmTriggered=false
+        const elements=this.template.querySelectorAll('c-clock-dropdown')
+        Array.from(elements).forEach(element=>{
+            element.reset("")
+        })
+        
     }
 }
