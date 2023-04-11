@@ -1,0 +1,48 @@
+:host(){
+    --dark-blue:#243356;
+    --white:#ffffff;
+    --yellow:#ffcd0a;
+    --light-blue:#00D9FE;
+    --size-14:14px;
+    --size-16:16px
+
+}
+
+.alarm-card{
+    max-width: 440px;
+    width: 100%;
+    padding: 30px;
+    background: var(--dark-blue);
+    color: var(--white);
+    border-radius: var(--size-16);
+    margin: 24px auto;
+}
+
+h1{
+    color: var(--yellow);
+    font-size: 36px;
+    text-align: center;
+    font-weight: 500;
+}
+
+h2{
+    font-size: 48px;
+    text-align: center;
+    font-weight: 500;
+    color: var(--light-blue);
+    margin: 30px auto;
+}
+
+button{
+    background: var(--yellow);
+    font-size: 20px;
+    padding: var(--size-14);
+    border-color:var(--yellow);
+    color: var(--dark-blue);
+    margin: 12px;
+}
+
+img{
+    margin: 20px auto;
+    display: block;
+}
