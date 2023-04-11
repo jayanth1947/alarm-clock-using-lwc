@@ -46,3 +46,11 @@ img{
     margin: 20px auto;
     display: block;
 }
+
+.custom-label{
+    color: var(--light-blue);
+}
+
+.custom-select{
+    color: var(--dark-blue);
+}

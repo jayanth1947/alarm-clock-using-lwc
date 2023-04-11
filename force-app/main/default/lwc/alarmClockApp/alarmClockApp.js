@@ -6,8 +6,14 @@ export default class AlarmClockApp extends LightningElement {
 
     currentTime=''
 
+    hours=[]
+    minutes=[]
+    meridians=["AM","PM"]
+
     connectedCallback(){
         this.currentTimeHandler()
+        this.createHoursOption()
+        this.createMinutessOption()
     }
 
     currentTimeHandler(){
@@ -35,5 +41,19 @@ export default class AlarmClockApp extends LightningElement {
         this.currentTime=`${hours}:${minutes}:${seconds} ${ampm}`
         },1000)
         
+    }
+
+    createHoursOption(){
+        for(let hour=1;hour<=12;hour++){
+            let val=hour<10 ? "0"+hour :hour
+            this.hours.push(val)
+        }
+    }
+
+    createMinutessOption(){
+        for(let minute=0;minute<=59;minute++){
+            let val=minute<10 ? "0"+minute :minute
+            this.minutes.push(val)
+        }
     }
 }
