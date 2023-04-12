@@ -1,0 +1,49 @@
+<template>
+
+     <!-- Alarm card container -->
+    <div class="alarm-card">
+
+        <!-- Heading for the alarm card -->
+        <h1>Alarm Clock</h1>
+
+        <!-- Image of a clock, with a conditional class to make it shake -->
+        <img src={clockImage} class={shakeImage} alt="Clock Image"
+        height="200px"
+        width="200px">
+
+        <!-- Display current time -->
+        <h2>{currentTime}</h2>
+
+        <!-- Grid layout to display dropdowns for setting the alarm time -->
+        <div class="slds-grid slds-gutters">
+            <div class="slds-col">
+
+                <!-- Hour dropdown -->
+                <c-clock-dropdown label="Hour(s)" options={hours} unique-id="select-hour" onoptionhandler={optionHandler}></c-clock-dropdown>
+            </div>
+            <div class="slds-col">
+
+                <!-- Minute dropdown -->
+                <c-clock-dropdown label="Minute(s)" options={minutes} unique-id="select-minute" onoptionhandler={optionHandler}></c-clock-dropdown>
+            </div>
+            <div class="slds-col">
+
+                <!-- AM/PM dropdown -->
+                <c-clock-dropdown label="AM/PM" options={meridians} unique-id="select-meridian" onoptionhandler={optionHandler}></c-clock-dropdown>
+            </div>
+            </div>
+
+             <!-- If alarm is not set, show "Set Alarm" button -->
+            <template if:false={isAlarmSet}>
+                <button class="slds-button slds-button_neutral slds-button_stretch" disabled={isFieldNotSelected}
+            onclick={handleButton} >Set Alarm</button>
+            </template>
+            
+            <!-- If alarm is set, show "Clear Alarm" button -->
+            <template if:true={isAlarmSet}>
+                <button class="slds-button slds-button_neutral slds-button_stretch"
+            onclick={clearButton} >Clear Alarm</button>
+            </template>
+     
+    </div>
+</template>                 
