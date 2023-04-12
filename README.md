@@ -1,18 +1,27 @@
-# Salesforce DX Project: Next Steps
+# Alarm Clock using LWC
 
-Now that you’ve created a Salesforce DX project, what’s next? Here are some documentation resources to get you started.
+A simple web-based alarm clock built using Lightning Web Components (LWC). This project allows users to set an alarm by selecting the hour, minute, and meridian (AM/PM) using dropdown menus. Once the alarm is set, the clock will trigger an alert at the selected time.
 
-## How Do You Plan to Deploy Your Changes?
+## Usage
 
-Do you want to deploy a set of changes, or create a self-contained application? Choose a [development model](https://developer.salesforce.com/tools/vscode/en/user-guide/development-models).
+- Use the dropdown menus to select the desired alarm time.
+- Click the "Set Alarm" button to activate the alarm.
+- To clear the alarm, click the "Clear" button.
 
-## Configure Your Salesforce DX Project
+## Features
 
-The `sfdx-project.json` file contains useful configuration information for your project. See [Salesforce DX Project Configuration](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_ws_config.htm) in the _Salesforce DX Developer Guide_ for details about this file.
+- User-friendly interface with dropdown menus for selecting alarm time.
+- Clock shows the current time and updates every second.
+- Sound alert when the alarm is triggered.
+- Alarm can be cleared with a single button click.
 
-## Read All About It
+## Technologies Used
 
-- [Salesforce Extensions Documentation](https://developer.salesforce.com/tools/vscode/)
-- [Salesforce CLI Setup Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_setup.meta/sfdx_setup/sfdx_setup_intro.htm)
-- [Salesforce DX Developer Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_intro.htm)
-- [Salesforce CLI Command Reference](https://developer.salesforce.com/docs/atlas.en-us.sfdx_cli_reference.meta/sfdx_cli_reference/cli_reference.htm)
+- Lightning Web Components (LWC)
+- HTML
+- CSS
+- JavaScript
+
+## Contributions
+
+Contributions are welcome! If you find a bug or want to improve the code, feel free to submit a pull request.
