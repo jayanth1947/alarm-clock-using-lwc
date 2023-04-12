@@ -1,3 +1,4 @@
+/* define custom CSS variables for colors and sizes */
 :host(){
     --dark-blue:#243356;
     --white:#ffffff;
@@ -8,6 +9,7 @@
 
 }
 
+/* Styling for the card */
 .alarm-card{
     max-width: 440px;
     width: 100%;
@@ -18,6 +20,7 @@
     margin: 24px auto;
 }
 
+/* Styling for the h1 tag */
 h1{
     color: var(--yellow);
     font-size: 36px;
@@ -25,6 +28,7 @@ h1{
     font-weight: 500;
 }
 
+/* Styling for the h2 tag */
 h2{
     font-size: 48px;
     text-align: center;
@@ -33,6 +37,7 @@ h2{
     margin: 30px auto;
 }
 
+/* Styling to a button */
 button{
     background: var(--yellow);
     font-size: 20px;
@@ -42,19 +47,23 @@ button{
     margin: 12px;
 }
 
+/* Styling to an Image */
 img{
     margin: 20px auto;
     display: block;
 }
 
+/* Styling for the Label */
 .custom-label{
     color: var(--light-blue);
 }
 
+/* Styling for the selected Item */
 .custom-select{
     color: var(--dark-blue);
 }
 
+/* Image Shaking */
 img.shake{
     /* Start the shake animation and make the animation last for 0.5 seconds */
     animation: shake 0.5s;

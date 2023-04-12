@@ -1,15 +1,29 @@
 <template>
+
+    <!-- Form element container -->
     <div class="slds-form-element">
+
+        <!-- Label for the dropdown -->
         <label class="slds-form-element__label custom-label" for={uniqueId}>Minute(s)</label>
         <div class="slds-form-element__control">
-        <div class="slds-select_container">
-        <select class="slds-select custom-select" id={uniqueId} onchange={selectChange}>
-        <option value="">Select</option>
-        <template for:each={options} for:item="option">
-            <option key={option} value={option}>{option}</option>
-        </template>
-        </select>
+
+            <!-- Dropdown container -->
+            <div class="slds-select_container">
+
+            <!-- Dropdown element with an ID and onchange event handler -->
+            <select class="slds-select custom-select" id={uniqueId} onchange={selectChange}>
+
+                <!-- Default "Select" option -->
+                    <option value="">Select</option>
+
+                    <!-- Iterate over the options prop using a template for loop -->
+                    <template for:each={options} for:item="option">
+
+                        <!-- Option element with a key and value attribute -->
+                        <option key={option} value={option}>{option}</option>
+                    </template>
+            </select>
+            </div>
         </div>
-        </div>
-        </div>
+    </div>
 </template>
