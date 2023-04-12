@@ -22,6 +22,8 @@ A simple web-based alarm clock built using Lightning Web Components (LWC). This 
 - CSS
 - JavaScript
 
+[Demo Link](https://empathetic-goat-jgrtil-dev-ed.my.site.com/alarmClock)
+
 ## Contributions
 
 Contributions are welcome! If you find a bug or want to improve the code, feel free to submit a pull request.
